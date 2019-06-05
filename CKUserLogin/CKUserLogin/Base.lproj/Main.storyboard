@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Fetch View Controller-->
         <scene sceneID="n8Y-BV-a2Y">
             <objects>
-                <viewController id="Ijd-f0-yGf" sceneMemberID="viewController">
+                <viewController id="Ijd-f0-yGf" customClass="FetchViewController" customModule="CKUserLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4hH-uE-nfC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="296" y="72"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="Drs-Od-wD6">
             <objects>
-                <viewController id="Qvt-Sb-xfU" sceneMemberID="viewController">
+                <viewController id="Qvt-Sb-xfU" customClass="SignUpViewController" customModule="CKUserLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EAb-kY-g1D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="1228.985507246377" y="-552.45535714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="WWU-rX-9ub">
             <objects>
-                <viewController id="m1L-Df-d1h" sceneMemberID="viewController">
+                <viewController id="m1L-Df-d1h" customClass="WelcomeViewController" customModule="CKUserLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gt5-i1-Dxq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,6 +112,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QFo-jh-d46"/>
+        <segue reference="9fq-px-Icp"/>
     </inferredMetricsTieBreakers>
 </document>

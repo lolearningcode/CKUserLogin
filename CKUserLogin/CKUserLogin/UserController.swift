@@ -47,4 +47,32 @@ class UserController {
             })
         }
     }
+    
+    func fetchCurrentUser(completion: @escaping (Bool) -> Void) {
+        
+        CKContainer.default().fetchUserRecordID { (appleUserRecordID, error) in
+            if let error = error {
+                print("Save error \(error.localizedDescription)")
+                completion(false); return
+            }
+            
+            guard let appleUserRecordID = appleUserRecordID else { return }
+            let appleUserReference = CKRecord.Reference(recordID: appleUserRecordID, action: .deleteSelf)
+            let predicate = NSPredicate(format: "%K == %@", User.appleUserReferenceKey, appleUserReference)
+            let query = CKQuery(recordType: User.userKey, predicate: predicate)
+            
+            self.publicDB.perform(query, inZoneWith: nil, completionHandler: { (records, error) in
+                if let error = error {
+                    print("Perform query error \(error.localizedDescription)")
+                    completion(false); return
+                }
+                
+                guard let records = records, records.count != 0, let userRecord = records.first else { completion(false); return }
+                
+                let currentUser = User(ckRecord: userRecord)
+                self.currentUser = currentUser
+                completion(true)
+            })
+        }
+    }
 }
