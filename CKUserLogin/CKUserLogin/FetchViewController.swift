@@ -16,7 +16,9 @@ class FetchViewController: UIViewController {
         UserController.shared.fetchCurrentUser { (success) in
             if success {
                 DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "toWelcomeVC", sender: nil)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let viewController = storyboard.instantiateViewController(withIdentifier: "navController")
+                    UIApplication.shared.windows.first?.rootViewController = viewController
                 }
             } else {
                 DispatchQueue.main.async {

@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC23557222A9734B0052BEA9 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC23557122A9734B0052BEA9 /* EntryListTableViewController.swift */; };
+		EC23557422A9735D0052BEA9 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC23557322A9735D0052BEA9 /* EntryDetailViewController.swift */; };
+		EC23557622A9746D0052BEA9 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC23557522A9746D0052BEA9 /* Entry.swift */; };
+		EC23557822A97B990052BEA9 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC23557722A97B990052BEA9 /* EntryController.swift */; };
 		EC4FDDFD22A8238700FEFEFA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FDDFC22A8238700FEFEFA /* User.swift */; };
 		EC4FDDFF22A8239100FEFEFA /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FDDFE22A8239000FEFEFA /* UserController.swift */; };
 		EC4FDE0122A837EC00FEFEFA /* FetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FDE0022A837EC00FEFEFA /* FetchViewController.swift */; };
 		EC4FDE0322A837F600FEFEFA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FDE0222A837F600FEFEFA /* SignUpViewController.swift */; };
-		EC4FDE0522A837FF00FEFEFA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FDE0422A837FF00FEFEFA /* WelcomeViewController.swift */; };
 		EC5C9EF122A821B800EBE451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5C9EF022A821B800EBE451 /* AppDelegate.swift */; };
 		EC5C9EF622A821B800EBE451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5C9EF422A821B800EBE451 /* Main.storyboard */; };
 		EC5C9EF822A821B900EBE451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5C9EF722A821B900EBE451 /* Assets.xcassets */; };
@@ -20,11 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC23557122A9734B0052BEA9 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		EC23557322A9735D0052BEA9 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
+		EC23557522A9746D0052BEA9 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		EC23557722A97B990052BEA9 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		EC4FDDFC22A8238700FEFEFA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EC4FDDFE22A8239000FEFEFA /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		EC4FDE0022A837EC00FEFEFA /* FetchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchViewController.swift; sourceTree = "<group>"; };
 		EC4FDE0222A837F600FEFEFA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		EC4FDE0422A837FF00FEFEFA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EC5C9EED22A821B800EBE451 /* CKUserLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKUserLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5C9EF022A821B800EBE451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5C9EF522A821B800EBE451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,11 +76,14 @@
 				EC5C9F0222A821C300EBE451 /* CKUserLogin.entitlements */,
 				EC5C9F0622A821EE00EBE451 /* Resources */,
 				EC5C9EF422A821B800EBE451 /* Main.storyboard */,
+				EC23557522A9746D0052BEA9 /* Entry.swift */,
+				EC23557722A97B990052BEA9 /* EntryController.swift */,
 				EC4FDDFC22A8238700FEFEFA /* User.swift */,
 				EC4FDDFE22A8239000FEFEFA /* UserController.swift */,
 				EC4FDE0022A837EC00FEFEFA /* FetchViewController.swift */,
 				EC4FDE0222A837F600FEFEFA /* SignUpViewController.swift */,
-				EC4FDE0422A837FF00FEFEFA /* WelcomeViewController.swift */,
+				EC23557122A9734B0052BEA9 /* EntryListTableViewController.swift */,
+				EC23557322A9735D0052BEA9 /* EntryDetailViewController.swift */,
 			);
 			path = CKUserLogin;
 			sourceTree = "<group>";
@@ -177,11 +186,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC23557622A9746D0052BEA9 /* Entry.swift in Sources */,
 				EC4FDDFF22A8239100FEFEFA /* UserController.swift in Sources */,
 				EC4FDE0122A837EC00FEFEFA /* FetchViewController.swift in Sources */,
+				EC23557822A97B990052BEA9 /* EntryController.swift in Sources */,
+				EC23557222A9734B0052BEA9 /* EntryListTableViewController.swift in Sources */,
 				EC4FDDFD22A8238700FEFEFA /* User.swift in Sources */,
-				EC4FDE0522A837FF00FEFEFA /* WelcomeViewController.swift in Sources */,
 				EC5C9EF122A821B800EBE451 /* AppDelegate.swift in Sources */,
+				EC23557422A9735D0052BEA9 /* EntryDetailViewController.swift in Sources */,
 				EC4FDE0322A837F600FEFEFA /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

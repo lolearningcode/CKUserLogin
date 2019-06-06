@@ -13,6 +13,7 @@ class User {
     let username: String
     let firstName: String
     let appleUserReference: CKRecord.Reference
+    var recordID: CKRecord.ID?
     
     static let userKey = "User"
     static let appleUserReferenceKey = "appleUserReference"
@@ -30,15 +31,18 @@ class User {
         self.username = username
         self.firstName = firstName
         self.appleUserReference = appleUserReference
+        self.recordID = ckRecord.recordID
     }
 }
 
 extension CKRecord {
     convenience init(user: User) {
+        let recordID = user.recordID ?? CKRecord.ID(recordName: UUID().uuidString)
         
-        self.init(recordType: User.userKey)
+        self.init(recordType: User.userKey, recordID: recordID)
         self.setValue(user.username, forKey: User.userNameKey)
         self.setValue(user.firstName, forKey: User.firstNameKey)
         self.setValue(user.appleUserReference, forKey: User.appleUserReferenceKey)
+        user.recordID = recordID
     }
 }
