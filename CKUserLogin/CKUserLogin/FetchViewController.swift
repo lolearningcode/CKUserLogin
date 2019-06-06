@@ -9,9 +9,21 @@
 import UIKit
 
 class FetchViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        UserController.shared.fetchCurrentUser { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "toWelcomeVC", sender: nil)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "toSignUpVC", sender: nil)
+                }
+            }
+        }
     }
 }
+

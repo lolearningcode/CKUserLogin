@@ -9,11 +9,25 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var firstNameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func signupButtonTapped(_ sender: Any) {
+        guard let username = usernameTextField.text, !username.isEmpty, let firstName = firstNameTextField.text, !firstName.isEmpty else { return }
+        
+        UserController.shared.createNewUser(username: username, firstName: firstName) { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "toWelcomeVCFrom", sender: nil)
+                }
+            }
+        }
     }
     
 

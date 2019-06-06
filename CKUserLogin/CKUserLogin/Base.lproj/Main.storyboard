@@ -68,6 +68,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el0-8W-FhG">
                                         <rect key="frame" x="0.0" y="80" width="54" height="30"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signupButtonTapped:" destination="Qvt-Sb-xfU" eventType="touchUpInside" id="muA-PX-A4z"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -76,7 +79,9 @@
                         <viewLayoutGuide key="safeArea" id="tgJ-Qf-Qd5"/>
                     </view>
                     <connections>
-                        <segue destination="m1L-Df-d1h" kind="show" identifier="toWelcomeVC" id="9fq-px-Icp"/>
+                        <outlet property="firstNameTextField" destination="jcX-dV-Ojy" id="GIm-wL-Xij"/>
+                        <outlet property="usernameTextField" destination="VdX-07-kQY" id="e1I-Wa-8dh"/>
+                        <segue destination="m1L-Df-d1h" kind="show" identifier="toWelcomeVCFrom" id="9fq-px-Icp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbn-qR-lFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,6 +110,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TcS-aa-BTj"/>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="rTR-yz-ZGQ" id="3HR-tO-H95"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHb-rS-vai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
