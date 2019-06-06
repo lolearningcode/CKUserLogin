@@ -1,22 +1,19 @@
 //
-//  WelcomeViewController.swift
+//  EntryDetailViewController.swift
 //  CKUserLogin
 //
-//  Created by Lo Howard on 6/5/19.
+//  Created by Lo Howard on 6/6/19.
 //  Copyright © 2019 Lo Howard. All rights reserved.
 //
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
-    @IBOutlet weak var welcomeLabel: UILabel!
-    
+class EntryDetailViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let currentUser = UserController.shared.currentUser else { return }
-        
-        welcomeLabel.text = "Welcome \(currentUser.firstName)"
+        // Do any additional setup after loading the view.
     }
     
 
